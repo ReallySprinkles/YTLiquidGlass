@@ -30,7 +30,5 @@ Contributions are always welcome — issues and pull requests both help.
 
 For bug reports, include your device, iOS version and YouTube version.
 
-# made with ❤️ by gloop
-
 <small>made with ❤️ by gloop</small>
 
