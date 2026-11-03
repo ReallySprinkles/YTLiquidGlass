@@ -15,7 +15,7 @@ You can toggle whether you want the tab bar or no.
 
 <p align="center">
   <img src="screenshots/tab_bar.jpg" width="1000" alt="Tab Bar">
-  <img src="screenshots/settings.jpg" width="690" alt="Settings">
+  <img src="screenshots/settings.png" width="690" alt="Settings">
   <img src="screenshots/liquid_glass_settings.jpg" width="690" alt="Liquid Glass Settings">
   </p>
 </details>
