@@ -29,3 +29,5 @@ YTLiquidGlass has no activation service, analytics, telemetry or updater.
 Contributions are always welcome — issues and pull requests both help.
 
 For bug reports, include your device, iOS version and YouTube version.
+
+# made with ❤️ by gloop
