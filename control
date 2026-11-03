@@ -1,9 +1,9 @@
-Package: com.example.ytliquidglass
+Package: com.imgloop.ytliquidglass
 Name: YTLiquidGlass
-Version: 0.3.0
+Version: 1.0
 Architecture: iphoneos-arm
-Description: Enables YouTube built-in Liquid Glass + settings toggle + sideload sign-in fix
-Maintainer: you
-Author: you
+Description: Enables YouTube built-in Liquid Glass
+Maintainer: gloop
+Author: gloop
 Section: Tweaks
 Depends: mobilesubstrate
