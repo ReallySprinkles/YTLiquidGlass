@@ -4,9 +4,6 @@
 #import <objc/message.h>
 #import <objc/runtime.h>
 
-// Private YouTube classes, declared by hand. Names come from public header dumps
-// and may differ in 21.43.5 -- verify with a class-dump of the decrypted IPA.
-@interface YTPivotBarView : UIView
 @end
 @interface YTSettingsGroupData : NSObject
 @property (nonatomic, assign) NSInteger type;
@@ -47,7 +44,6 @@ static id LGMakeGlassEffect(void) {
 + (BOOL)computeIsLiquidGlassAvailable { return LGEnabled() ? YES : %orig; }
 %end
 
-// Tab bar: if YouTube's own effect getter returns nothing, supply a glass effect.
 %hook YTPivotBarView
 - (id)liquidGlassEffect {
     id e = %orig;
