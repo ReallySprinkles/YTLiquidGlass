@@ -4,7 +4,7 @@ Enables YouTube’s New Liquid Glass Tab Bar
 
 ## Install
 
-Download the IPA for your iOS version from the [latest release](https://github.com/ReallySprinkles/YTLiquidGlass/releases) and install it with TrollStore, AltStore, SideStore or LiveContainer.
+Download the IPA for your iOS version from the [latest release](https://github.com/ReallySprinkles/YTLiquidGlass/releases) and install it with TrollStore, AltStore, SideStore or LiveContainer, etc..
 
 ## Settings
 
