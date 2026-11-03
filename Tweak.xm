@@ -156,7 +156,6 @@ static NSString *LGAccessGroup(void) {
 + (id)sharedAccessGroup { return LGAccessGroup(); }
 %end
 
-// Google ties sign-in to the real bundle ID. Report it only to code inside the app bundle.
 %hook NSBundle
 - (id)objectForInfoDictionaryKey:(NSString *)key {
     if (LGEnabled() && self == NSBundle.mainBundle &&
