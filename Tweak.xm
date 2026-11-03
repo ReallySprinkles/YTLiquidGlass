@@ -19,11 +19,6 @@ static BOOL LGEnabled(void) {
 
 #pragma mark - Liquid Glass (YouTube's built-in implementation, switched on)
 
-// YouTube ships its own Liquid Glass UI, gated behind feature flags and an
-// availability check. These hooks turn it on when the toggle is enabled.
-// Flag/class names verified to exist in a comparable tweak binary; confirm
-// against your own class-dump of 21.43.5.
-
 static id LGMakeGlassEffect(void) {
     Class c = NSClassFromString(@"UIGlassEffect"); // iOS 26+
     return c ? [[c alloc] init] : nil;
