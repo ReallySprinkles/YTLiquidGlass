@@ -3,7 +3,7 @@
 Enables YouTube’s New Liquid Glass Tab Bar
 
 > [!WARNING]
-> YTLiquidGlass is still in Beta. If there are any bugs, please report it.
+> YTLiquidGlass is still in Beta. If there are any bugs, please report them.
 
 ## Install
 
