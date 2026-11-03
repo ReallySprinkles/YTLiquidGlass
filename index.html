@@ -30,7 +30,6 @@
                     boxShadow: {
                         'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.5)',
                         'glow': '0 0 25px rgba(255, 0, 0, 0.25)',
-                        'blue-glow': '0 0 20px rgba(59, 130, 246, 0.4)',
                     }
                 }
             }
@@ -44,38 +43,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* Glassmorphism Styles */
         .glass-panel {
             background: rgba(24, 24, 24, 0.65);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .liquid-pill {
-            background: rgba(35, 35, 45, 0.65);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.2);
-        }
-
-        .glow-effect {
-            position: relative;
-        }
-        .glow-effect::before {
-            content: '';
-            position: absolute;
-            top: -2px; left: -2px; right: -2px; bottom: -2px;
-            background: linear-gradient(45deg, #ff0055, #00e5ff, #7000ff);
-            border-radius: inherit;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            filter: blur(10px);
-        }
-        .glow-effect:hover::before {
-            opacity: 0.6;
         }
 
         /* Custom Scrollbar */
@@ -126,7 +98,7 @@
             <i data-lucide="alert-triangle" class="w-5 h-5 text-amber-400 shrink-0 mt-0.5"></i>
             <div class="text-sm">
                 <strong class="font-semibold text-amber-300">Beta Release Warning:</strong>
-                YTLiquidGlass is currently in Beta. If you encounter any UI bugs or unexpected crashes, please report them on GitHub.
+                YTLiquidGlass is currently in Beta. If there are any bugs, please report them on GitHub.
             </div>
         </div>
 
@@ -139,219 +111,121 @@
                 </div>
                 
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                    Experience YouTube's <br/>
+                    Enables YouTube's New <br/>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-400 to-purple-400">Liquid Glass</span> Tab Bar
                 </h1>
 
                 <p class="text-lg text-gray-400 max-w-xl">
-                    Force-enables YouTube's unreleased modern translucent navigation bar on iOS. Enjoy sleek floating aesthetics, complete customization toggle in settings, and zero bloat.
+                    Force-enables YouTube's sleek floating navigation bar on iOS with complete in-app preference toggles.
                 </p>
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 pt-2">
                     <a href="#download" class="flex items-center justify-center space-x-2 bg-gradient-to-r from-red-600 to-red-500 text-white font-semibold px-6 py-3.5 rounded-2xl hover:from-red-500 hover:to-red-400 transition-all shadow-lg shadow-red-600/30 hover:scale-[1.02] active:scale-[0.98]">
                         <i data-lucide="download" class="w-5 h-5"></i>
-                        <span>Get .IPA (YouTube Bundle)</span>
+                        <span>Download IPA</span>
                     </a>
                     <a href="#download" class="flex items-center justify-center space-x-2 glass-panel hover:bg-white/10 text-white font-semibold px-6 py-3.5 rounded-2xl transition-all border border-white/15 hover:scale-[1.02] active:scale-[0.98]">
                         <i data-lucide="code-2" class="w-5 h-5 text-gray-400"></i>
-                        <span>Get .dylib Injectable</span>
+                        <span>Download dylib</span>
                     </a>
-                </div>
-
-                <!-- Specs badges -->
-                <div class="pt-4 flex flex-wrap items-center gap-6 text-xs text-gray-400 border-t border-white/10">
-                    <div class="flex items-center space-x-1.5">
-                        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
-                        <span>No Telemetry / Tracking</span>
-                    </div>
-                    <div class="flex items-center space-x-1.5">
-                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
-                        <span>MIT Licensed</span>
-                    </div>
-                    <div class="flex items-center space-x-1.5">
-                        <i data-lucide="sliders" class="w-4 h-4 text-emerald-400"></i>
-                        <span>In-App Settings Toggle</span>
-                    </div>
                 </div>
             </div>
 
-            <!-- Interactive Screen Mockup / Liquid Glass Preview -->
-            <div class="lg:col-span-5 flex justify-center">
-                <div class="relative w-full max-w-[320px] aspect-[9/19] bg-black rounded-[48px] p-3 shadow-2xl border-4 border-neutral-800 ring-1 ring-white/20 overflow-hidden flex flex-col justify-between">
-                    
-                    <!-- Dynamic Island / Notch -->
-                    <div class="absolute top-4 left-1/2 -translate-x-1/2 w-28 h-7 bg-black rounded-full z-30 flex items-center justify-between px-3">
-                        <div class="w-3 h-3 rounded-full bg-neutral-900 border border-neutral-800"></div>
-                        <div class="w-2.5 h-2.5 rounded-full bg-blue-900/40"></div>
+            <!-- Main Screenshot Hero Display -->
+            <div class="lg:col-span-5 flex flex-col items-center justify-center space-y-3">
+                <div class="relative max-w-[260px] rounded-[32px] overflow-hidden shadow-2xl border border-white/10 group">
+                    <img 
+                        src="https://ytliquidglass.imgloop.site/screenshots/tab_bar.jpg" 
+                        width="1000" 
+                        alt="Tab Bar" 
+                        class="w-full h-auto rounded-[32px] object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                </div>
+                <span class="text-xs text-gray-400 font-medium tracking-wide">Tab Bar</span>
+            </div>
+        </section>
+
+        <!-- Screenshots Showcase Gallery -->
+        <section class="space-y-6 pt-6">
+            <div class="text-center space-y-2">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">Screenshots</h2>
+                <p class="text-gray-400 text-sm max-w-lg mx-auto">Visual preview of YTLiquidGlass settings integration inside YouTube.</p>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-8 pt-4">
+                <!-- Screenshot 1: Tab Bar -->
+                <div class="flex flex-col items-center space-y-3">
+                    <div class="max-w-[200px] sm:max-w-[220px] rounded-3xl overflow-hidden border border-white/10 shadow-xl bg-black hover:border-white/20 transition-all">
+                        <img 
+                            src="https://ytliquidglass.imgloop.site/screenshots/tab_bar.jpg" 
+                            width="1000" 
+                            alt="Tab Bar"
+                            class="w-full h-auto rounded-3xl"
+                        />
                     </div>
+                    <span class="text-xs font-semibold text-gray-300 tracking-wide">Tab Bar</span>
+                </div>
 
-                    <!-- Screen Content Preview -->
-                    <div class="relative w-full h-full bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop')] bg-cover bg-center rounded-[38px] overflow-hidden flex flex-col justify-between p-4 pt-12">
-                        
-                        <!-- Top Bar Mock -->
-                        <div class="flex items-center justify-between text-white/90 z-10 bg-black/40 backdrop-blur-md p-2.5 rounded-2xl border border-white/10">
-                            <div class="flex items-center space-x-2">
-                                <i data-lucide="youtube" class="w-6 h-6 text-red-500 fill-current"></i>
-                                <span class="font-bold text-sm tracking-tight">YouTube</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <i data-lucide="cast" class="w-4 h-4"></i>
-                                <i data-lucide="bell" class="w-4 h-4"></i>
-                                <i data-lucide="search" class="w-4 h-4"></i>
-                            </div>
-                        </div>
-
-                        <!-- Content Mock Card -->
-                        <div class="bg-black/50 backdrop-blur-md p-3.5 rounded-2xl border border-white/10 space-y-2">
-                            <div class="h-28 w-full bg-gradient-to-r from-purple-600/50 to-pink-600/50 rounded-xl flex items-center justify-center border border-white/10">
-                                <i data-lucide="play-circle" class="w-10 h-10 text-white/80"></i>
-                            </div>
-                            <div class="h-3 bg-white/30 rounded w-3/4"></div>
-                            <div class="h-2.5 bg-white/20 rounded w-1/2"></div>
-                        </div>
-
-                        <!-- Floating Liquid Glass Tab Bar Preview -->
-                        <div class="relative z-20 my-2">
-                            <div class="liquid-pill px-4 py-3 rounded-full flex items-center justify-between text-white shadow-2xl">
-                                <div class="flex flex-col items-center text-white scale-105">
-                                    <i data-lucide="home" class="w-5 h-5"></i>
-                                </div>
-                                <div class="flex flex-col items-center text-gray-400 hover:text-white transition">
-                                    <i data-lucide="flame" class="w-5 h-5"></i>
-                                </div>
-                                <div class="flex flex-col items-center text-gray-400 hover:text-white transition">
-                                    <div class="w-7 h-7 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
-                                        <i data-lucide="plus" class="w-4 h-4 text-white"></i>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col items-center text-gray-400 hover:text-white transition">
-                                    <i data-lucide="tv-2" class="w-5 h-5"></i>
-                                </div>
-                                <div class="flex flex-col items-center text-gray-400 hover:text-white transition">
-                                    <div class="w-5 h-5 rounded-full bg-amber-400/80 border border-white/40 flex items-center justify-center text-[10px] font-bold text-black">
-                                        G
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Home Indicator Bar -->
-                        <div class="w-32 h-1 bg-white/60 rounded-full mx-auto mt-1"></div>
+                <!-- Screenshot 2: Settings -->
+                <div class="flex flex-col items-center space-y-3">
+                    <div class="max-w-[200px] sm:max-w-[220px] rounded-3xl overflow-hidden border border-white/10 shadow-xl bg-black hover:border-white/20 transition-all">
+                        <img 
+                            src="https://ytliquidglass.imgloop.site/screenshots/settings.png" 
+                            width="690" 
+                            alt="Settings"
+                            class="w-full h-auto rounded-3xl"
+                        />
                     </div>
+                    <span class="text-xs font-semibold text-gray-300 tracking-wide">Settings</span>
+                </div>
+
+                <!-- Screenshot 3: Liquid Glass Settings -->
+                <div class="flex flex-col items-center space-y-3">
+                    <div class="max-w-[200px] sm:max-w-[220px] rounded-3xl overflow-hidden border border-white/10 shadow-xl bg-black hover:border-white/20 transition-all">
+                        <img 
+                            src="https://ytliquidglass.imgloop.site/screenshots/liquid_glass_settings.png" 
+                            width="690" 
+                            alt="Liquid Glass Settings"
+                            class="w-full h-auto rounded-3xl"
+                        />
+                    </div>
+                    <span class="text-xs font-semibold text-gray-300 tracking-wide">Liquid Glass Settings</span>
                 </div>
             </div>
         </section>
 
         <!-- Feature Grid -->
         <section class="space-y-6 pt-6">
-            <div class="text-center space-y-2">
-                <h2 class="text-2xl sm:text-3xl font-bold text-white">Why Use YTLiquidGlass?</h2>
-                <p class="text-gray-400 text-sm max-w-lg mx-auto">Designed to give you native aesthetic controls without bloated tweaks or unwanted background services.</p>
-            </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Feature 1 -->
-                <div class="glass-panel p-6 rounded-2xl space-y-3 border border-white/10 hover:border-white/20 transition">
+                <div class="glass-panel p-6 rounded-2xl space-y-3 border border-white/10">
                     <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
                         <i data-lucide="sliders" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="text-lg font-semibold text-white">Native Settings Toggle</h3>
+                    <h3 class="text-lg font-semibold text-white">In-App Preference</h3>
                     <p class="text-sm text-gray-400">
-                        Integrates seamlessly into YouTube's native Settings menu under <span class="text-gray-200 font-medium">Account &gt; Liquid Glass</span>. Enable or disable anytime with a simple switch.
+                        Open YouTube Settings and choose Liquid Glass to toggle whether you want the tab bar or not[span_2](start_span)[span_2](end_span).
                     </p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="glass-panel p-6 rounded-2xl space-y-3 border border-white/10 hover:border-white/20 transition">
+                <div class="glass-panel p-6 rounded-2xl space-y-3 border border-white/10">
                     <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
                         <i data-lucide="shield-check" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="text-lg font-semibold text-white">100% Privacy Focused</h3>
+                    <h3 class="text-lg font-semibold text-white">Zero Telemetry</h3>
                     <p class="text-sm text-gray-400">
-                        Zero telemetry, no background activation checks, no tracking scripts, and no auto-updaters. Pure client-side code execution.
+                        YTLiquidGlass has no activation service, analytics, telemetry or updater[span_3](start_span)[span_3](end_span).
                     </p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="glass-panel p-6 rounded-2xl space-y-3 border border-white/10 hover:border-white/20 transition">
+                <div class="glass-panel p-6 rounded-2xl space-y-3 border border-white/10">
                     <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
                         <i data-lucide="file-code" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="text-lg font-semibold text-white">Open Source & Lightweight</h3>
+                    <h3 class="text-lg font-semibold text-white">Open Source</h3>
                     <p class="text-sm text-gray-400">
-                        Licensed under MIT. Clean Objective-C/Logos codebase that executes directly on launch without performance overhead or battery drain.
+                        Distributed under the MIT License. Contributions are always welcome via issues and pull requests[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span).
                     </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Interactive Settings Mockup Section -->
-        <section class="glass-panel p-6 sm:p-8 rounded-3xl space-y-6 border border-white/10">
-            <div class="max-w-xl">
-                <h2 class="text-2xl font-bold text-white">In-App Preference Center</h2>
-                <p class="text-sm text-gray-400 mt-1">Easily toggle the tweak on or off directly inside YouTube settings.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-                <!-- Settings Menu Mock -->
-                <div class="bg-yt-card rounded-2xl p-4 border border-yt-border space-y-3">
-                    <div class="flex items-center space-x-3 text-white pb-2 border-b border-white/10">
-                        <i data-lucide="chevron-left" class="w-5 h-5 text-gray-400"></i>
-                        <span class="font-semibold text-base">Settings</span>
-                    </div>
-                    
-                    <div class="space-y-1">
-                        <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider px-2 py-1">Account</div>
-                        
-                        <!-- Liquid Glass Settings Item -->
-                        <div class="flex items-center justify-between p-2.5 bg-white/5 rounded-xl border border-white/10 cursor-pointer">
-                            <div class="flex items-center space-x-3">
-                                <i data-lucide="sparkles" class="w-4 h-4 text-blue-400"></i>
-                                <span class="text-sm font-medium text-white">Liquid Glass</span>
-                            </div>
-                            <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500"></i>
-                        </div>
-
-                        <div class="flex items-center justify-between p-2.5 hover:bg-white/5 rounded-xl transition text-gray-300">
-                            <div class="flex items-center space-x-3">
-                                <i data-lucide="settings" class="w-4 h-4 text-gray-400"></i>
-                                <span class="text-sm">General</span>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center justify-between p-2.5 hover:bg-white/5 rounded-xl transition text-gray-300">
-                            <div class="flex items-center space-x-3">
-                                <i data-lucide="users" class="w-4 h-4 text-gray-400"></i>
-                                <span class="text-sm">Switch or manage account</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Preference Submenu Toggle Mock -->
-                <div class="bg-yt-card rounded-2xl p-5 border border-yt-border space-y-4">
-                    <div class="flex items-center space-x-3 text-white pb-3 border-b border-white/10">
-                        <i data-lucide="chevron-left" class="w-5 h-5 text-gray-400"></i>
-                        <span class="font-semibold text-base">Liquid Glass</span>
-                    </div>
-
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <div class="text-sm font-semibold text-white">Liquid Glass Tab Bar</div>
-                            <div class="text-xs text-gray-400 max-w-[220px] mt-0.5">Turns on YouTube's built-in Liquid Glass design. Restart YouTube to apply.</div>
-                        </div>
-
-                        <!-- Toggle Switch -->
-                        <button id="demo-toggle" onclick="toggleDemoSwitch()" class="w-12 h-7 bg-blue-600 rounded-full p-1 transition-colors duration-200 ease-in-out focus:outline-none shrink-0 shadow-inner">
-                            <div id="demo-toggle-knob" class="w-5 h-5 bg-white rounded-full shadow-md transform translate-x-5 transition-transform duration-200 ease-in-out"></div>
-                        </button>
-                    </div>
-
-                    <div id="toggle-status" class="text-xs text-blue-400 bg-blue-500/10 p-2.5 rounded-xl border border-blue-500/20 flex items-center space-x-2">
-                        <i data-lucide="info" class="w-4 h-4 shrink-0"></i>
-                        <span>Liquid Glass is currently <strong>Enabled</strong>.</span>
-                    </div>
                 </div>
             </div>
         </section>
@@ -359,98 +233,47 @@
         <!-- Download Section -->
         <section id="download" class="space-y-6 pt-4">
             <div class="text-center space-y-2">
-                <h2 class="text-3xl font-bold text-white">Downloads & Releases</h2>
-                <p class="text-gray-400 text-sm">Choose the installation file that best fits your sideloading workflow.</p>
+                <h2 class="text-3xl font-bold text-white">Downloads</h2>
+                <p class="text-gray-400 text-sm">Download the latest release assets directly.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Prebuilt IPA Option -->
+                <!-- IPA Card -->
                 <div class="glass-panel p-6 rounded-3xl border border-white/10 space-y-5 flex flex-col justify-between hover:border-red-500/30 transition shadow-xl">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-xs font-semibold border border-red-500/30">Recommended</span>
+                            <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-xs font-semibold border border-red-500/30">IPA Release</span>
                             <span class="text-xs text-gray-400">322 MB</span>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white">Pre-built IPA</h3>
-                            <p class="text-sm text-gray-400 mt-1">Bundled with YouTube v21.42.4 + YTLiquidGlass v1.0 Beta. Ready to sideload immediately.</p>
-                        </div>
-                        <div class="space-y-2 pt-2 text-xs text-gray-300">
-                            <div class="flex items-center space-x-2">
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
-                                <span>No compilation or injection needed</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
-                                <span>Compatible with TrollStore & Sideloaders</span>
-                            </div>
+                            <h3 class="text-xl font-bold text-white">YTLiquidGlass_1.0_YouTube_21.42.4.ipa</h3>
+                            <p class="text-sm text-gray-400 mt-1">Download the ready .ipa file and sideload it using TrollStore, AltStore, SideStore, LiveContainer, etc[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span).</p>
                         </div>
                     </div>
 
-                    <a href="https://github.com/ReallySprinkles/YTLiquidGlass/releases" target="_blank" class="w-full py-3 px-4 bg-white text-black hover:bg-gray-200 font-bold rounded-xl text-center text-sm transition flex items-center justify-center space-x-2 shadow-md">
+                    <a href="https://github.com/ReallySprinkles/YTLiquidGlass/releases/download/1.0_Beta/YTLiquidGlass_1.0_YouTube_21.42.4.ipa" target="_blank" class="w-full py-3 px-4 bg-white text-black hover:bg-gray-200 font-bold rounded-xl text-center text-sm transition flex items-center justify-center space-x-2 shadow-md">
                         <i data-lucide="download" class="w-4 h-4"></i>
-                        <span>Download .IPA File</span>
+                        <span>Download .IPA</span>
                     </a>
                 </div>
 
-                <!-- Raw Dylib Option -->
+                <!-- Dylib Card -->
                 <div class="glass-panel p-6 rounded-3xl border border-white/10 space-y-5 flex flex-col justify-between hover:border-blue-500/30 transition shadow-xl">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-semibold border border-blue-500/30">For Developers</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-semibold border border-blue-500/30">Binary</span>
                             <span class="text-xs text-gray-400">79.9 KB</span>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white">Standalone Dylib</h3>
-                            <p class="text-sm text-gray-400 mt-1">YTLiquidGlass.dylib compiled binary. Ideal for injecting into custom decrypted YouTube IPAs.</p>
-                        </div>
-                        <div class="space-y-2 pt-2 text-xs text-gray-300">
-                            <div class="flex items-center space-x-2">
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
-                                <span>Inject via Azule or Sideloadly</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
-                                <span>Ultra lightweight dynamic library</span>
-                            </div>
+                            <h3 class="text-xl font-bold text-white">YTLiquidGlass.dylib</h3>
+                            <p class="text-sm text-gray-400 mt-1">Download the .dylib if you can inject it into your own ipa[span_8](start_span)[span_8](end_span).</p>
                         </div>
                     </div>
 
-                    <a href="https://github.com/ReallySprinkles/YTLiquidGlass/releases" target="_blank" class="w-full py-3 px-4 glass-panel hover:bg-white/10 text-white font-bold rounded-xl text-center text-sm transition border border-white/20 flex items-center justify-center space-x-2">
+                    <a href="https://github.com/ReallySprinkles/YTLiquidGlass/releases/download/1.0_Beta/YTLiquidGlass.dylib" target="_blank" class="w-full py-3 px-4 glass-panel hover:bg-white/10 text-white font-bold rounded-xl text-center text-sm transition border border-white/20 flex items-center justify-center space-x-2">
                         <i data-lucide="file-code" class="w-4 h-4 text-gray-300"></i>
-                        <span>Download YTLiquidGlass.dylib</span>
+                        <span>Download .dylib</span>
                     </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sideloading Methods Guide -->
-        <section class="glass-panel p-6 sm:p-8 rounded-3xl space-y-6 border border-white/10">
-            <h2 class="text-2xl font-bold text-white flex items-center space-x-2">
-                <i data-lucide="smartphone" class="w-6 h-6 text-red-500"></i>
-                <span>Installation Methods</span>
-            </h2>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-                <div class="p-4 bg-white/5 rounded-2xl border border-white/10 text-center space-y-2 hover:bg-white/10 transition">
-                    <div class="font-bold text-white text-sm">TrollStore</div>
-                    <div class="text-xs text-gray-400">Permanent signing (iOS 14.0 - 17.0)</div>
-                </div>
-                <div class="p-4 bg-white/5 rounded-2xl border border-white/10 text-center space-y-2 hover:bg-white/10 transition">
-                    <div class="font-bold text-white text-sm">AltStore</div>
-                    <div class="text-xs text-gray-400">Standard 7-day signing</div>
-                </div>
-                <div class="p-4 bg-white/5 rounded-2xl border border-white/10 text-center space-y-2 hover:bg-white/10 transition">
-                    <div class="font-bold text-white text-sm">SideStore</div>
-                    <div class="text-xs text-gray-400">On-device signing via WireGuard</div>
-                </div>
-                <div class="p-4 bg-white/5 rounded-2xl border border-white/10 text-center space-y-2 hover:bg-white/10 transition">
-                    <div class="font-bold text-white text-sm">Sideloadly</div>
-                    <div class="text-xs text-gray-400">Desktop loader with dylib injection</div>
-                </div>
-                <div class="p-4 bg-white/5 rounded-2xl border border-white/10 text-center space-y-2 hover:bg-white/10 transition col-span-2 sm:col-span-1">
-                    <div class="font-bold text-white text-sm">LiveContainer</div>
-                    <div class="text-xs text-gray-400">Run tweak without app limit</div>
                 </div>
             </div>
         </section>
@@ -461,50 +284,21 @@
     <footer class="glass-panel border-t border-white/10 mt-12 py-8">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
             <div class="flex items-center space-x-2">
-                <span>Made with ❤️ by</span>
-                <a href="https://github.com/ReallySprinkles" target="_blank" class="text-white font-medium hover:underline flex items-center space-x-1">
-                    <span>gloop</span>
-                    <span class="text-gray-500">(ReallySprinkles)</span>
+                <span>made with ❤️ by</span>
+                <a href="https://github.com/ReallySprinkles" target="_blank" class="text-white font-medium hover:underline">
+                    gloop
                 </a>
             </div>
 
             <div class="flex items-center space-x-6">
                 <a href="https://github.com/ReallySprinkles/YTLiquidGlass" target="_blank" class="hover:text-white transition">GitHub Repository</a>
                 <a href="https://github.com/ReallySprinkles/YTLiquidGlass/blob/main/LICENSE" target="_blank" class="hover:text-white transition">MIT License</a>
-                <a href="https://github.com/ReallySprinkles/YTLiquidGlass/issues" target="_blank" class="hover:text-white transition">Report Bugs</a>
             </div>
         </div>
     </footer>
 
-    <!-- Interactive Script -->
     <script>
-        // Initialize Lucide icons
         lucide.createIcons();
-
-        // Toggle Switch State
-        let isEnabled = true;
-
-        function toggleDemoSwitch() {
-            isEnabled = !isEnabled;
-            const knob = document.getElementById('demo-toggle-knob');
-            const toggle = document.getElementById('demo-toggle');
-            const status = document.getElementById('toggle-status');
-
-            if (isEnabled) {
-                knob.style.transform = 'translateX(20px)';
-                toggle.classList.remove('bg-neutral-700');
-                toggle.classList.add('bg-blue-600');
-                status.className = "text-xs text-blue-400 bg-blue-500/10 p-2.5 rounded-xl border border-blue-500/20 flex items-center space-x-2";
-                status.innerHTML = `<i data-lucide="info" class="w-4 h-4 shrink-0"></i><span>Liquid Glass is currently <strong>Enabled</strong>.</span>`;
-            } else {
-                knob.style.transform = 'translateX(0px)';
-                toggle.classList.remove('bg-blue-600');
-                toggle.classList.add('bg-neutral-700');
-                status.className = "text-xs text-gray-400 bg-white/5 p-2.5 rounded-xl border border-white/10 flex items-center space-x-2";
-                status.innerHTML = `<i data-lucide="info" class="w-4 h-4 shrink-0"></i><span>Liquid Glass is currently <strong>Disabled</strong>.</span>`;
-            }
-            lucide.createIcons();
-        }
     </script>
 </body>
 </html>
